@@ -20,7 +20,7 @@ func notifyEvents(schedule *Schedule) {
 				}
 				// This is a trick to change the date to today always
 				// eventDateTimeToday := time.Date(time.Now().Year(), time.Now().Month(), time.Now().Day(), eventDateTime.Hour(), eventDateTime.Minute(), 0, 0, time.Now().Location())
-				if eventDateTime.After(time.Now().Add(15*time.Minute)) && eventDateTime.Before(time.Now().Add(16*time.Minute)) {
+				if eventDateTime.After(time.Now().Add(15*time.Minute).Add(10*time.Second).UTC()) && eventDateTime.Before(time.Now().Add(15*time.Minute).Add(10*time.Second).UTC()) {
 					fmt.Println("NOW", time.Now(), "event date", event.Date)
 					sendEvent(event, "### Aviso de charla dentro de 15 minutos:")
 				}
