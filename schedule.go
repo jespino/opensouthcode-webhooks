@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	scheduleXMLURL = "https://www.opensouthcode.org/conferences/opensouthcode2023/schedule.xml"
+	scheduleXMLURL = "https://www.opensouthcode.org/conferences/opensouthcode2024/schedule.xml"
 )
 
 type Schedule struct {
