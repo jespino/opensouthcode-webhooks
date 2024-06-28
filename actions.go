@@ -3,8 +3,8 @@ package main
 import "github.com/mattermost/mattermost/server/public/model"
 
 const (
-	IncommingWebhookURL = "http://localhost:8065/hooks/yewdyufwztrgdx7fhgxbd78usa"
-	Channel             = "town-square"
+	IncommingWebhookURL = "https://opensouthcode.cloud.mattermost.com/hooks/<ID>"
+	Channel             = "programaschedule"
 )
 
 func sendEvent(event Event, message string) {
@@ -23,7 +23,7 @@ func sendEvent(event Event, message string) {
 		AuthorName: authorName,
 		AuthorLink: authorLink,
 		Title:      event.Title,
-		TitleLink:  "https://www.opensouthcode.org/conferences/opensouthcode2023/program/proposals/" + event.Id,
+		TitleLink:  "https://www.opensouthcode.org/conferences/opensouthcode2024/program/proposals/" + event.Id,
 		Text:       event.Abstract,
 		Fields: []*model.SlackAttachmentField{
 			{
